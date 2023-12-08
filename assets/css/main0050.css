@@ -2,7 +2,7 @@
     font-size: 0.8rem;
     box-sizing: border-box;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     :root {
         font-size: 0.9rem;
     }
@@ -48,7 +48,7 @@ li {
     font-size: 1.1rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     body {
         line-height: 1.5;
     }
@@ -79,7 +79,7 @@ a:link {
     text-decoration: none;
 }
 a:visited {
-    color:  rgb(38, 38, 154);
+    color: rgb(38, 38, 154);
     text-decoration: none;
 }
 a:hover {
@@ -89,6 +89,20 @@ a:hover {
 a:active {
     color:  rgb(38, 38, 154);
     text-decoration: none;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.no-mbp {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -118,20 +132,61 @@ a:active {
     flex-direction: column;
 }
 
-.container .main-area-post-top {
+.container .main-area-post-left {
     flex: 0 0 auto;
     margin: 0;
     border: 0;
-    border-bottom: 1px solid rgb(200, 200, 200);
-    padding: 0 0 0.5em 0;
-    width: 100%;
+    padding: 0;
 }
 
-.container .main-area-post {
+.container .main-area-post-centre {
     flex: 0 0 auto;
     margin: 0;
     border: 0;
-    padding: 2.0em 0 0 0;
+    padding: 0;
+}
+
+.container .main-area-post-centre h1 {
+    text-align: center;
+}
+.container .main-area-post-centre h2 {
+    text-align: center;
+}
+.container .main-area-post-centre h3 {
+    text-align: center;
+}
+.container .main-area-post-centre h4 {
+    text-align: center;
+}
+.container .main-area-post-centre h5 {
+    text-align: center;
+}
+.container .main-area-post-centre h6 {
+    text-align: center;
+}
+.container .main-area-post-centre p {
+    text-align: center;
+}
+
+.container .main-area-post-centre p img {
+    text-align: center;
+    max-width: 95%;
+    height: auto;
+    margin: 0.3em 0 0.3em 0;
+    border: 1px solid black;
+}
+
+.container .main-area-post-centre .whoandwhen {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+@media screen and (min-width: 500px) {
+    .container .main-area-post-centre p img {
+        max-width: 80%;
+        margin: 0.75em 0 0.75em 0;
+    }
 }
 
 .container .main-area-post-bottom {
@@ -150,7 +205,7 @@ a:active {
     width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .container {
         margin: 0.5em 0.5em 0.5em 0.5em;
     }
@@ -161,7 +216,7 @@ a:active {
 .header-figure {
     display: block;
     position: relative;
-    margin: 0 0 0 0;
+    margin: 0;
     border: 0;
     padding: 0;
 }
@@ -175,7 +230,7 @@ a:active {
 
 .header-figure > figcaption {
     position: absolute; 
-    color: white; 
+    color: white;
     top: 5px;
     left: 5px;
     font-size: 1.4rem;
@@ -186,7 +241,7 @@ a:active {
     padding: 0;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .header-figure > figcaption {
         top: 10px;
         left: 10px;
@@ -213,17 +268,17 @@ a:active {
 
 /* ------------------------------------------------------------------ */
 
-
 .header-nav {
     display: flex;
     flex: row;
     justify-content: center;
-    margin: 0 0 0 0;
+    margin: 0.1m 0 0.1em 0;
     border: 0;
     padding: 0;
 }
 
 .header-nav > p > .header-nav-item {
+    flex: 0 0 auto;
     line-height: 1;
     margin: 0;
     border: 0;
@@ -234,8 +289,8 @@ a:active {
     font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
-    .header-nav > p > .header-nav-item {
+@media screen and (min-width: 500px) {
+    .header-nav > p  > .header-nav-item{
         padding: 0 0.2em 0 0.2em;
     }
 }
@@ -265,7 +320,7 @@ a:active {
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .foot-text > p {
         font-size: 0.9rem;
     }    
@@ -281,7 +336,6 @@ a:active {
 
 /* ------------------------------------------------------------------ */
 
-
 .foot-nav {
     display: flex;
     justify-content: center;
@@ -294,7 +348,7 @@ a:active {
     font-size: 0.9em;
 }
 
-.foot-nav > p > .foot-nav-item {
+.foot-nav p > .foot-nav-item {
     flex: 0 0 auto; 
     line-height: 1;
     margin: 0;
@@ -306,7 +360,7 @@ a:active {
     font-weight: bold;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .foot-nav {
         margin-top: 0em;
         margin-bottom: 0.25em;
@@ -322,6 +376,20 @@ a:active {
 }
 
 /* ------------------------------------------------------------------ */
+
+.main-area-article .float-image-left {
+    float: left;
+    max-width: 20%;
+    margin: 1.5em 1em 0 0;
+    border: 0;
+    padding: 0;
+}
+.main-area-article .float-image-left img {
+    max-width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
 
 .main-area-article ul {
     padding-left: 1.5em;
@@ -341,7 +409,7 @@ a:active {
     line-height: 1.4;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .main-area-article ol {
         padding: 0 0 0 0.5em;
     }
@@ -351,55 +419,109 @@ a:active {
     }
 }
 
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------ */
 
-.main-area-article .post-summary-title {
-    text-align: center;
-}
-
-.main-area-article .post-summary-info {
-    padding: 0 0 0.25em 0;
-}
-
-.main-area-article .post-summary-info p {
-    font-size: 0.9rem;
-    line-height: 1;
-}
-
-.main-area-article .post-summary-line {
+.main-area-article .post-summary-photo {
     margin: 0;
     border: 0;
-    border-bottom: 1px solid rgb(200, 200, 200);
-    padding: 0 0 1.4em 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-@media (min-width: 600px) {
-    .main-area-article .post-summary-info p {
-        font-size: 1.0rem;
+.main-area-article .post-summary-photo .image {
+    flex: 100% 0 0;
+    margin: 0;
+    border: 0;
+    padding: 0.5em 0 0 0;
+}
+
+.main-area-article .post-summary-photo .image img{
+    width: 100%;
+}
+
+.main-area-article .post-summary-photo .text {
+    flex: 100% 0 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+@media (min-width: 500px) {
+
+    .main-area-article .post-summary-photo {
+        align-items: center;
+    }
+    .main-area-article .post-summary-photo > .image {
+        flex: 35% 0 0;
+        margin: 0;
+        border: 0;
+        padding: 1em 1em 0 0;
+    }
+    .main-area-article .post-summary-photo > .text {
+        flex: 65% 0 0;
+        margin: 0;
+        border: 1em 1em 0 1em;
+        padding: 0;
+    }
+} 
+
+/* ------------------------------------------------------------------ */
+
+.main-area-article .post-summary-basic {
+    margin: 0.5em 0 0.5em 0;
+    border: 0;
+    padding: 0;
+}
+
+.main-area-article .post-summary-basic p {
+    margin: 0;
+    border: 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+
+.main-area-article .post-summary-bottom {
+    margin: 0;
+    border: 0; 
+    padding: 0;
+}
+
+.main-area-article .post-summary-bottom p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+@media (min-width: 500px) {
+    .main-area-article .post-summary-bottom {
+        padding: 0;
     }
 }
 
 /* ------------------------------------------------------------------ */
 
-.main-area-post-top > h1 {
-    text-align: center;
+.main-area-article .post-summary-line {
+    margin: 0.5em 0 0 0;
+    border: 0;
+    border-top: 1px solid rgb(200, 200, 200);
+    padding: 0;
 }
 
-.main-area-post-top > p {    
-    margin: 0.5em 0 0 0;
-    line-height: 1;
-}
-.main-area-post-top > .main-area-post-top-left {    
-    float: none;
-    text-align: center;
-}
-.main-area-post-top > .main-area-post-top-right {   
-    float: none;
-    text-align: center;
-}
+/* ------------------------------------------------------------------ */
 
 .main-area-post-bottom { 
-    margin: 2em 0 0 0;
+    margin: 0 0 0 0;
 }
 .main-area-post-bottom > p {    
     margin: 0.4em 0 0 0;
@@ -407,19 +529,7 @@ a:active {
     font-size: 0.9rem;
 }
 
-@media (min-width: 600px) {
-    .main-area-post-top > p {   
-        margin: 0.3em 0 0 0;  
-    }
-    .main-area-post-top > .main-area-post-top-left {  
-        float: left;
-        text-align: left;
-    }
-    .main-area-post-top > .main-area-post-top-right {   
-        float: right;
-        text-align: right;
-    }
-    
+@media (min-width: 500px) {
     .main-area-post-bottom > p {   
         margin: 0.3em 0 0 0; 
         font-size: 1.0rem;
@@ -449,7 +559,7 @@ a:active {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .main-area-article .post-pages-nav > p > .post-pages-nav-item {
         padding: 0 .2em 0 .2em;
     }
@@ -465,21 +575,87 @@ a:active {
     margin: 1em 0 0 0;
     border: 0;
     padding: 0;
-    font-size: 1.2rem;
 }
 
 .main-area-article .post-tags-nav p {   
     flex: 0 0 auto; 
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1;
+    margin: 0 0 0.5em 0;
     border: 0;
-    padding: 0 .2em 0 .2em;
-    font-size: 1.3rem;
+    padding: 0 .2em 0 0.2em;
 }
 
+.main-area-article .post-tags-nav p:not(:last-child) {   
+    border-right: 1px solid rgb(150, 150, 150);
+}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .main-area-article .post-tags-nav p  {
+        margin: 0 0 0.75em 0;
         padding: 0 .2em 0 .2em;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+.main-area-article .map-ww1 {
+    margin: 0;
+    border: 0;
+    border: 1px solid red;
+    padding: 0;
+    height: 400px;
+}
+
+/* ------------------------------------------------------------------ */
+
+.fallen-info {
+    margin: 0 0 1em 0;
+    border: 0;
+    border-bottom: 1px solid #29704a;
+    padding: 0 0 2em 0;
+}
+
+/* ------------------------------------------------------------------ */
+
+.roll-of-honour {
+    display: flex;
+    flex-wrap: wrap;
+}
+.roll-of-honour .roll-of-honour-individual {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+    border: 0;
+    padding: 0 1em 0 0;
+}
+
+@media screen and (min-width: 250px) {
+    .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 0;
+        padding: 0 1em 0 0;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 33%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 0;
+        padding: 0 1em 0 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .roll-of-honour .roll-of-honour-individual {  
+        flex-basis: 25%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 0;
+        padding: 0 1em 0 0;
     }
 }
