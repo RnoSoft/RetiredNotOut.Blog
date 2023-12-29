@@ -105,6 +105,17 @@ a:active {
     padding: 0;
 }
 
+.indent-left-and-right {
+    margin-left: auto;
+    margin-right: auto;
+}
+.width-90 {
+    width: 90%;
+}
+.centre-text {
+    text-align: center;
+}
+
 /* ------------------------------------------------------------------ */
 
 .container {
@@ -168,25 +179,29 @@ a:active {
     text-align: center;
 }
 
-.container .main-area-post-centre p img {
+.container .main-area-post-centre p .img-landscape {
     text-align: center;
-    max-width: 95%;
+    max-width: 80%;
     height: auto;
     margin: 0.3em 0 0.3em 0;
     border: 1px solid black;
 }
 
+.container .main-area-post-centre p .img-portrait {
+    text-align: center;
+    max-width: 50%;
+    height: auto;
+    margin: 0.3em 0 0.3em 0;
+    border: 1px solid black;
+}
 .container .main-area-post-centre .whoandwhen {
     font-weight: lighter;
     font-style: italic;
 }
 
-
-@media screen and (min-width: 500px) {
-    .container .main-area-post-centre p img {
-        max-width: 80%;
-        margin: 0.75em 0 0.75em 0;
-    }
+.container .main-area-post-left .whoandwhen {
+    font-weight: lighter;
+    font-style: italic;
 }
 
 .container .main-area-post-bottom {
@@ -379,7 +394,6 @@ a:active {
 
 .main-area-article .float-image-left {
     float: left;
-    max-width: 20%;
     margin: 1.5em 1em 0 0;
     border: 0;
     padding: 0;
@@ -388,7 +402,68 @@ a:active {
     max-width: 100%;
     margin: 0;
     border: 0;
+    border: 1px solid black;
     padding: 0;
+}
+.main-area-article .fil-about {
+    max-width: 40%;
+}
+.main-area-article .fil-desphoto {
+    max-width: 60%;
+}
+
+.main-area-article .float-image-right {
+    float: right;
+    margin: 1.5em 0 0 1em;
+    border: 0;
+    padding: 0;
+}
+.main-area-article .float-image-right img {
+    max-width: 100%;
+    margin: 0;
+    border: 0;
+    border: 1px solid black;
+    padding: 0;
+}
+.main-area-article .fir-about {
+    max-width: 40%;
+}
+.main-area-article .fir-desphoto {
+    max-width: 60%;
+}
+
+.main-area-article .float-image-centre {
+    margin: 1.5em auto 0 auto;
+    border: 0;
+    padding: 0;
+}
+.main-area-article .float-image-centre img {
+    max-width: 100%;
+    margin: 0;
+    border: 0;
+    border: 1px solid black;
+    padding: 0;
+}
+.main-area-article .fic-desphoto {
+    max-width: 60%;
+}
+
+@media (min-width: 500px) {
+    .main-area-article .fil-about {
+        max-width: 25%;
+    }    
+    .main-area-article .fil-desphoto {
+        max-width: 40%;
+    }
+    .main-area-article .fir-about {
+        max-width: 25%;
+    }
+    .main-area-article .fir-desphoto {
+        max-width: 40%;
+    }
+    .main-area-article .fic-desphoto {
+        max-width: 40%;
+    }
 }
 
 .main-area-article ul {
@@ -515,6 +590,11 @@ a:active {
     margin: 0.5em 0 0 0;
     border: 0;
     border-top: 1px solid rgb(200, 200, 200);
+    padding: 0;
+}
+.main-area-article .post-summary-start {
+    margin: 1em 0 0 0;
+    border: 0;
     padding: 0;
 }
 
@@ -658,4 +738,17 @@ a:active {
         border: 0;
         padding: 0 1em 0 0;
     }
+}
+
+
+
+/* ---------------------------------------------------------------------------
+   Specific to posts
+   --------------------------------------------------------------------------- */
+
+.simple-image-left-landscape {max-width: 95%; border: 1px solid black;}
+.simple-image-right-portrait {max-width: 70%; margin: 0 12.5% 0 12.5%; border: 1px solid black;}
+@media screen and (min-width: 500px) {
+    .simple-image-left-landscape {max-width: 40%; border: 1px solid black;}
+    .simple-image-right-portrait {max-width: 25%; margin: 0 7.5% 0 7.5%; border: 1px solid black;}
 }
